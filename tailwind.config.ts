@@ -22,7 +22,7 @@ const config: Config = {
       },
       backgroundColor: {
         //custom tailwind bg color class
-        "light-bg": colors.neutral[50],
+        "light-bg": colors.amber[50],
         "light-bg-hover": colors.neutral[300],
         "dark-bg": colors.gray[900],
         "dark-bg-hover": colors.slate[700],

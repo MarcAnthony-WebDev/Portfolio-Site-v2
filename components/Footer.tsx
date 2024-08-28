@@ -19,13 +19,13 @@ const footerLinks: linksType[] = [
 
 const Footer = () => {
   return (
-    <footer className="bg-light-bg col-[2/3] dark:bg-gray-950">
+    <footer className="col-[2/3] border-t-[1px] bg-light-bg dark:bg-dark-bg">
       <ul className="flex h-full items-end justify-center gap-2 py-4">
         {footerLinks.map((link) => {
           const LinkIcon = link.icon;
           return (
             <li key={link.name}>
-              <button className="hover:bg-light-bg-hover dark:hover:bg-dark-bg-hover rounded-full p-2">
+              <button className="rounded-full p-2 hover:bg-light-bg-hover dark:hover:bg-dark-bg-hover">
                 <Link href={link.href}>
                   {LinkIcon && (
                     <LinkIcon className="h-full w-full transition duration-200 hover:rotate-3" />
