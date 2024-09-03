@@ -29,7 +29,7 @@ const NavLinks = () => {
               href={link.href}
               scroll={true}
               className={clsx(
-                "hover:bg-light-bg-hover dark:hover:bg-dark-bg-hover flex items-center gap-2 rounded-md p-2 text-sm font-medium transition duration-200",
+                "flex items-center gap-2 rounded-md p-2 text-sm font-medium text-light-color transition duration-200 hover:bg-light-bg-hover dark:text-dark-color dark:hover:bg-dark-bg-hover",
                 {
                   "bg-neutral-200 dark:bg-slate-600": pathname === link.href,
                 },
