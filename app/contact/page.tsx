@@ -4,7 +4,7 @@ import { ContactForm } from "@/components";
 
 const Page = () => {
   return (
-    <div className="main-color-styles h-full">
+    <div className="main-color-styles h-full w-full">
       <ContactForm />
     </div>
   );

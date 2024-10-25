@@ -30,6 +30,14 @@ body {
   color: white;
 }
 
+main p {
+  @apply text-xl md:text-2xl;
+}
+
+main h4 {
+  @apply text-xl font-bold;
+}
+
 .flex-center {
   @apply flex items-center justify-center;
 }
@@ -43,5 +51,5 @@ body {
 }
 
 .form__label {
-  @apply font-semibold;
+  @apply text-xl font-semibold;
 }

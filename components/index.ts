@@ -5,5 +5,16 @@ import ContactForm from "./ContactForm";
 ContactForm;
 import CustomButton from "./CustomButton";
 import Modal from "./Modal";
+import GalleryCard from "./GalleryCard";
+import Brands from "./Brands";
 
-export { NavBar, Footer, ThemeToggler, ContactForm, CustomButton, Modal };
+export {
+  NavBar,
+  Footer,
+  ThemeToggler,
+  ContactForm,
+  CustomButton,
+  Modal,
+  GalleryCard,
+  Brands,
+};

@@ -28,7 +28,7 @@ const Footer = () => {
               <button className="rounded-full p-2 hover:bg-light-bg-hover dark:hover:bg-dark-bg-hover">
                 <Link href={link.href}>
                   {LinkIcon && (
-                    <LinkIcon className="h-full w-full transition duration-200 hover:rotate-3" />
+                    <LinkIcon className="h-full w-full text-light-color transition duration-200 hover:rotate-3 dark:text-dark-color" />
                   )}
                 </Link>
               </button>

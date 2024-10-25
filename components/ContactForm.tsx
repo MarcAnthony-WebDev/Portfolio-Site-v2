@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
         action=""
         onSubmit={handleSubmit}
       >
-        <h2 className="mb-6 text-center text-3xl font-semibold">Reach Out!</h2>
+        <h2 className="mb-6 text-center text-5xl font-semibold">Reach Out!</h2>
         <div className="flex flex-col gap-2">
           <label className="form__label" htmlFor="name">
             Name
@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
             required
             maxLength={35}
           />
-          <p className="invisible text-red-500 peer-invalid:peer-focus:visible">
+          <p className="invisible text-lg text-red-500 peer-invalid:peer-focus:visible">
             Please enter your name
           </p>
         </div>
@@ -101,7 +101,7 @@ const ContactForm: React.FC = () => {
             required
             maxLength={100}
           />
-          <p className="invisible text-red-500 peer-invalid:peer-focus:visible">
+          <p className="invisible text-lg text-red-500 peer-invalid:peer-focus:visible">
             Please enter a valid email address
           </p>
         </div>
@@ -117,8 +117,9 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
             maxLength={400}
+            rows={6}
           />
-          <p className="invisible text-sm text-red-500 peer-invalid:peer-focus:visible">
+          <p className="invisible text-lg text-red-500 peer-invalid:peer-focus:visible">
             Please enter your message
           </p>
         </div>

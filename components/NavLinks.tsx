@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
-import { House, Info, BriefcaseBusiness, Contact } from "lucide-react";
+import { House, Info, BriefcaseBusiness, Contact, X } from "lucide-react";
 import ThemeToggler from "./ThemeToggler";
 import { linksType } from "@/types";
 
@@ -16,16 +16,30 @@ const links: linksType[] = [
   { href: "/contact", name: "Contact", icon: Contact },
 ];
 
-const NavLinks = () => {
+type NavLinks = {
+  isOpen: boolean;
+};
+
+const NavLinks = ({ isOpen, closeMenu }) => {
   const pathname = usePathname();
 
   return (
-    <ul className="flex items-stretch gap-4 md:flex-col md:items-start md:gap-10">
+    <ul
+      className={`fixed right-0 top-0 z-10 flex h-screen w-[300px] flex-col items-stretch gap-4 bg-neutral-100 p-6 dark:bg-slate-800 sm:static sm:h-auto sm:w-full sm:flex-row sm:bg-transparent sm:dark:bg-transparent md:z-0 md:flex-col md:items-start md:gap-10`}
+    >
+      {isOpen && (
+        <li className={`self-end pr-5 sm:hidden`}>
+          <button onClick={closeMenu}>
+            <X className="text-light-color dark:text-dark-color" />
+          </button>
+        </li>
+      )}
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
           <li key={link.name} className="w-full">
             <Link
+              onClick={closeMenu}
               href={link.href}
               scroll={true}
               className={clsx(

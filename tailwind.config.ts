@@ -22,16 +22,20 @@ const config: Config = {
       },
       backgroundColor: {
         //custom tailwind bg color class
-        "light-bg": colors.zinc[50],
+        "light-bg": colors.zinc[100],
         "light-bg-hover": colors.neutral[300],
         "dark-bg": colors.gray[900],
         "dark-bg-hover": colors.slate[700],
       },
       textColor: {
         //custom tailwind text color class
-        "light-color": colors.neutral[900],
+        "light-color": colors.neutral[800],
         "dark-color": colors.neutral[100],
       },
+    },
+    screens: {
+      sm: "800px",
+      md: "1000px",
     },
   },
   plugins: [],
