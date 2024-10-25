@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className="mx-auto" lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/images/MT-logo-bold.png"></link>
+      </head>
       <body
         className={`${inter.className} text-light-colordark:text-dark-color`}
       >

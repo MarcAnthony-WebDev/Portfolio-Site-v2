@@ -3,6 +3,7 @@ export type PortfolioItem = {
   title: string;
   href: string;
   src: string;
+  alt: string;
   description: string;
   fromColor?: string;
   viaColor?: string;
@@ -20,6 +21,7 @@ export const portfolioData: PortfolioItem[] = [
     fromColor: "from-lime-900",
     viaColor: "via-lime-500",
     toColor: "to-lime-50",
+    alt: "A Screenshot of the Cipco Fence Website",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ export const portfolioData: PortfolioItem[] = [
     src: "/images/wod-screenshot.png",
     description:
       "World of Discovery Summer Camp, located in Queens, NY, trusted me to create a vibrant, child-friendly website that captures the fun and excitement of summer camp. I collaborated closely with the camp's owner to ensure the design and functionality aligned with their vision, resulting in a site that engages both parents and kids.",
+    alt: "A Screenshot of the World of Discovery Website",
   },
   {
     id: 3,
@@ -39,6 +42,7 @@ export const portfolioData: PortfolioItem[] = [
     fromColor: "from-blue-900",
     viaColor: "via-blue-500",
     toColor: "to-blue-50",
+    alt: "A Screenshot of the Affordable Website",
   },
   {
     id: 4,
@@ -50,6 +54,7 @@ export const portfolioData: PortfolioItem[] = [
     fromColor: "from-orange-900",
     viaColor: "via-orange-500",
     toColor: "to-orange-50",
+    alt: "A Screenshot of the Mach-Speed Website",
   },
   {
     id: 5,
@@ -61,5 +66,6 @@ export const portfolioData: PortfolioItem[] = [
     fromColor: "from-red-900",
     viaColor: "via-red-500",
     toColor: "to-red-50",
+    alt: "A Screenshot of the letscelebrate2026.com Website",
   },
 ];

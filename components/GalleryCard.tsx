@@ -8,6 +8,7 @@ type GalleryCardType = {
   src: string;
   title: string;
   description: string;
+  alt: string;
   href: string;
   fromColor?: string;
   viaColor?: string;
@@ -19,6 +20,7 @@ const GalleryCard = ({
   title,
   href,
   description,
+  alt,
   fromColor = "from-green-900",
   viaColor = "via-green-500",
   toColor = "to-green-50",
@@ -28,7 +30,7 @@ const GalleryCard = ({
       <div className="gallery-card group relative h-[300px] w-[90vw] rounded-sm from-blue-300 to-blue-800 sm:w-[600px]">
         <Image
           src={src}
-          alt="Cipco Fence Image"
+          alt={alt}
           fill
           sizes="(max-width:768px) 400px"
           style={{
