@@ -25,6 +25,7 @@ const page = () => {
               fromColor={project.fromColor}
               viaColor={project.viaColor}
               toColor={project.toColor}
+              alt={project.alt}
             />
           ))}
         </div>

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 @layer base {
   /* html {
     @apply bg-white dark:bg-gray-800;
