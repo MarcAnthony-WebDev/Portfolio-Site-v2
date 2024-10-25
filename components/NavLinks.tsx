@@ -16,11 +16,12 @@ const links: linksType[] = [
   { href: "/contact", name: "Contact", icon: Contact },
 ];
 
-type NavLinks = {
+interface NavLinksProps {
   isOpen: boolean;
-};
+  closeMenu: () => void;
+}
 
-const NavLinks = ({ isOpen, closeMenu }) => {
+const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
   const pathname = usePathname();
 
   return (
