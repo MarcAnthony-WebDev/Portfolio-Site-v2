@@ -2,7 +2,12 @@ import { Resend } from "resend";
 import { EmailTemplate } from "../../../emails/EmailTemplate"; // Assuming you have one template component
 import { NextResponse } from "next/server";
 
+if (!process.env.E_ADDRESS) {
+  throw new Error("Recipient email is not defined in environment variables");
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY);
+const hostEmail = process.env.E_ADDRESS;
 
 export async function POST(request: Request) {
   try {
@@ -10,8 +15,8 @@ export async function POST(request: Request) {
 
     // Send email to yourself (admin)
     const adminEmailResponse = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["marcanthony.webdev@gmail.com"],
+      from: `Marcanthony Tumminello <${hostEmail}>`,
+      to: hostEmail,
       subject: "New Contact Form Submission",
       react: EmailTemplate({ firstName, email, message, isAdmin: true }), // Admin template
     });
@@ -25,7 +30,7 @@ export async function POST(request: Request) {
 
     // Send email to the user
     const userEmailResponse = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: `Marcanthony Tumminello <${hostEmail}>`,
       to: [email],
       subject: "Thanks for viewing my site!",
       react: EmailTemplate({ firstName, email, message }), // User template

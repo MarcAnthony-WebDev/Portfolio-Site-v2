@@ -15,7 +15,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       <div className="z-[60] mx-2 flex w-full max-w-[500px] flex-col items-center justify-center rounded bg-white p-10 text-light-color shadow-lg dark:text-light-color">
         <h2 className="mb-2 text-xl font-bold">Success!</h2>
         <p className="text-center text-lg">
-          your message has been sent successfully, thank you for reaching out!
+          Thank you for reaching out! A confirmation email has been sent to you.
         </p>
         <button
           className="mt-4 w-52 self-center rounded-3xl bg-slate-600 p-2 text-white transition duration-200 hover:bg-slate-500 active:translate-y-1"

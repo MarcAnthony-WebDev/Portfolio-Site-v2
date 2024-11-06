@@ -31,7 +31,7 @@ export default function RootLayout({
           <div className="site-container mx-auto flex min-h-screen flex-col bg-light-bg transition duration-200 dark:bg-dark-bg md:grid md:grid-cols-main-columns md:grid-rows-[1fr_75px]">
             <NavBar />
             {/* <div className="main-container col-[2/3] "> */}
-            <main className="col-[2/3] flex min-h-[100vh] w-full max-w-[1440px] justify-center justify-self-center">
+            <main className="col-[2/3] flex min-h-[100dvh] w-full max-w-[1440px] justify-self-center">
               {children}
             </main>
             <Footer />

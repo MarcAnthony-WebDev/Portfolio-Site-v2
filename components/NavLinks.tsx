@@ -44,7 +44,7 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
               href={link.href}
               scroll={true}
               className={clsx(
-                "flex items-center gap-2 rounded-md p-2 text-sm font-medium text-light-color transition duration-200 hover:bg-light-bg-hover dark:text-dark-color dark:hover:bg-dark-bg-hover",
+                "text-md flex items-center gap-2 rounded-md p-2 font-medium text-light-color transition duration-200 hover:bg-light-bg-hover dark:text-dark-color dark:hover:bg-dark-bg-hover",
                 {
                   "bg-neutral-200 dark:bg-slate-600": pathname === link.href,
                 },

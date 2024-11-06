@@ -11,7 +11,7 @@ const ContactForm: React.FC = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -68,7 +68,9 @@ const ContactForm: React.FC = () => {
         action=""
         onSubmit={handleSubmit}
       >
-        <h2 className="mb-6 text-center text-5xl font-semibold">Reach Out!</h2>
+        <h2 className="mb-6 text-center text-5xl font-semibold md:text-6xl">
+          Reach Out!
+        </h2>
         <div className="flex flex-col gap-2">
           <label className="form__label" htmlFor="name">
             Name

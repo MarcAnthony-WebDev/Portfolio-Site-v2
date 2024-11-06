@@ -33,7 +33,7 @@ const NavBar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <div className="nav-container relative col-span-1 row-span-2 h-full bg-light-bg outline outline-1 outline-neutral-200 dark:bg-gray-900 dark:outline-neutral-700 md:min-h-full">
+    <div className="nav-container relative col-span-1 row-span-2 h-full bg-light-bg outline outline-1 outline-neutral-200 dark:bg-dark-bg dark:outline-neutral-700 md:min-h-full">
       <div className={`${isFixed ? "h-48" : "h-0"}`}></div>
       <aside
         className={`md:p-5" top-0 flex h-max p-2 transition duration-200 md:fixed ${isFixed ? "fixed left-0 right-0 top-0 z-10 w-full bg-neutral-100 shadow-md dark:bg-slate-700" : "relative"}`}

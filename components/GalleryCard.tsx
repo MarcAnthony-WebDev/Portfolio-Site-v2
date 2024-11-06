@@ -77,7 +77,7 @@ const GalleryCard = ({
           {title}
         </Link>
         {/* <h3 className="text-2xl font-bold">{title}</h3> */}
-        <p className="text-lg">{description}</p>
+        <p className="text-xl">{description}</p>
       </div>
       <div className="button-container mt-auto">
         <button className="w-52 self-center rounded-3xl bg-slate-600 p-2 text-white transition duration-200 hover:bg-slate-500 active:translate-y-1">

@@ -1,59 +1,72 @@
 import Image from "next/image";
 import { Brands } from "@/components";
+import { FileText, ArrowRight, Github } from "lucide-react";
 
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="main-color-styles flex h-full max-w-[900px] flex-col gap-6 px-2 py-4 md:px-10 md:py-6">
+    <div className="container-styles">
       <div className="heading-container flex flex-col">
-        <h2 className="text-6xl font-bold">Hello I&apos;m Marcanthony</h2>
+        <h2 className="text-5xl font-bold md:text-6xl">
+          Hello I&apos;m Marcanthony
+        </h2>
         <p className="text-3xl">I am a React Developer</p>
         <div className="brand-container mt-2 flex gap-4">
           <Brands />
         </div>
       </div>
-      <div className="text-container flex flex-col gap-4 leading-loose">
-        <div className="text-group">
-          <h4 className="">Technical Skills</h4>
+      <div className="text-container flex flex-col gap-12 leading-loose">
+        <div className="text-group flex flex-col gap-2">
+          <h4 className="">ABOUT ME</h4>
           <p>
-            I use technologies like React, TypeScript, Next.js & Tailwind CSS to
-            build fast and clean websites & web applications.
+            I enjoy all things web design andI use technologies like React,
+            TypeScript, Next.js & Tailwind CSS to build fast and clean websites
+            & web applications.
           </p>
+
+          <Link
+            passHref
+            href="/about"
+            className="group mt-2 flex w-max flex-row items-center gap-2 hover:underline"
+          >
+            Learn More{" "}
+            <ArrowRight className="transition-transform duration-200 group-hover:translate-x-2" />
+          </Link>
         </div>
-        <div className="text-group">
-          <h4 className="">How It&apos;s going</h4>
+        <div className="text-group flex flex-col gap-2">
+          <h4 className="">My Work</h4>
           <p>
-            Since I started in web development, I have worked at some great
-            companies, met loads of fantastic people in the community, regularly
-            joining meetups in NYC, and found my passion in life.
+            I specialize in creating digital experiences that connect design and
+            functionality. My portfolio reflects a blend of creativity,
+            technical expertise, and attention to detail, whether it’s
+            developing fully responsive websites or designing unique visuals
+            that capture a brand’s identity. Every project is an opportunity to
+            enhance usability and bring a client’s vision to reality.
           </p>
+
+          <Link
+            passHref
+            href="/portfolio"
+            className="group mt-4 flex w-max flex-row items-center gap-2 hover:underline"
+          >
+            View My Recent Work
+            <ArrowRight className="transition-transform duration-200 group-hover:translate-x-2" />
+          </Link>
         </div>
-        <div className="text-group">
-          <h4 className="">How to find me</h4>
-          <p>
-            You can find me on{" "}
-            <Link
-              className="font-bold hover:underline"
-              href="https://tinyurl.com/mu88t4s9"
-              target="_blank"
-            >
-              LinkedIn
-            </Link>{" "}
-            &{" "}
-            <Link
-              href="https://tinyurl.com/5daa4cf6"
-              target="_blank"
-              className="font-bold hover:underline"
-            >
-              Github
-            </Link>{" "}
-            or you can send me an{" "}
-            <Link href="contact" className="font-bold hover:underline">
-              Email
-            </Link>{" "}
-            at marcanthony.webdev@gmail.com
-          </p>
+
+        <div className="button-group flex">
+          <Link
+            href="/documents/Resume.pdf"
+            target="_blank"
+            passHref
+            rel="noopener noreferrer"
+          >
+            <button className="mt-3 flex w-52 items-center justify-center gap-2 rounded-md bg-neutral-300 p-2 text-light-color transition duration-200 hover:bg-neutral-400 active:translate-y-1 dark:bg-slate-500 dark:text-dark-color hover:dark:bg-slate-600">
+              <FileText />
+              See My Resume
+            </button>
+          </Link>
         </div>
       </div>
     </div>

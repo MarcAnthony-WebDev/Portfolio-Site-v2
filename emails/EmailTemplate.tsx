@@ -35,7 +35,13 @@ export const EmailTemplate = ({
     </Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={""} width="170" height="50" alt="Logo" style={logo} />
+        {/* <Img
+          src="marctummi.com/images/MT-logo-bold.png"
+          width="170"
+          height="50"
+          alt="Logo"
+          style={logo}
+        /> */}
         {isAdmin ? (
           <>
             <Text style={paragraph}>
@@ -48,8 +54,8 @@ export const EmailTemplate = ({
           <>
             <Text style={paragraph}>Hi {firstName},</Text>
             <Text style={paragraph}>
-              Thank you for visiting my website and reaching out to me! I will
-              get back to you as soon as possible.
+              Thanks for stopping by my website! It&apos;s great to hear from
+              you, and I&apos;m looking forward to connecting!
             </Text>
             <Text style={paragraph}>
               Best,
@@ -59,7 +65,7 @@ export const EmailTemplate = ({
           </>
         )}
         <Hr style={hr} />
-        <Text style={footer}>Thank you for your time!</Text>
+        <Text style={footer}>Your time and interest mean a lot—thank you!</Text>
       </Container>
     </Body>
   </Html>
@@ -68,9 +74,11 @@ export const EmailTemplate = ({
 export default EmailTemplate;
 
 const main = {
-  backgroundColor: "#ffffff",
+  backgroundColor: "#111827",
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+  borderRadius: "16px",
+  padding: "2rem",
 };
 
 const container = {
@@ -83,9 +91,9 @@ const logo = {
 };
 
 const paragraph = {
-  fontSize: "16px",
+  fontSize: "22px",
   lineHeight: "26px",
-  color: "royalblue",
+  color: "#fff",
 };
 
 const hr = {
