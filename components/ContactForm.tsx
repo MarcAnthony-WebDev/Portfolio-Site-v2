@@ -22,6 +22,17 @@ const ContactForm: React.FC = () => {
     });
   };
 
+  //test validity onBlur
+  const [touchedFields, setTouchedFields] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  const handleBlur = (field: string) => {
+    setTouchedFields((prev) => ({ ...prev, [field]: true }));
+  };
+
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -62,14 +73,14 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="form-container flex h-full w-full items-center justify-center p-10">
+    <div className="form-container flex h-full w-full items-center justify-center px-4 py-20 md:p-10">
       <form
-        className="flex h-full w-full max-w-[600px] flex-col justify-center gap-4 rounded p-4 text-base shadow-lg outline outline-1 outline-gray-200"
+        className="outline-gray-400z flex h-full w-full max-w-[600px] flex-col justify-center gap-2 rounded px-2 py-6 text-base shadow-lg outline outline-1 sm:p-6 md:gap-4"
         action=""
         onSubmit={handleSubmit}
       >
-        <h2 className="mb-6 text-center text-5xl font-semibold md:text-6xl">
-          Reach Out!
+        <h2 className="mb-6 text-center text-3xl font-semibold md:text-6xl">
+          Let&apos;s Connect!
         </h2>
         <div className="flex flex-col gap-2">
           <label className="form__label" htmlFor="name">
@@ -77,15 +88,20 @@ const ContactForm: React.FC = () => {
           </label>
           <input
             type="text"
-            className="form__input peer"
+            className={`form__input peer ${
+              touchedFields.name && !formData.name ? "border-red-500" : ""
+            }`}
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
+            onBlur={() => handleBlur("name")}
             required
             maxLength={35}
           />
-          <p className="invisible text-lg text-red-500 peer-invalid:peer-focus:visible">
+          <p
+            className={`text-sm text-red-500 ${touchedFields.name && !formData.name ? "visible" : "invisible"} md:text-lg`}
+          >
             Please enter your name
           </p>
         </div>
@@ -94,34 +110,44 @@ const ContactForm: React.FC = () => {
             Email
           </label>
           <input
-            className="form__input peer"
+            className={`form__input peer ${
+              touchedFields.email && !formData.email.match(/^\S+@\S+\.\S+$/)
+                ? "border-red-500"
+                : ""
+            }`}
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            onBlur={() => handleBlur("email")}
             required
             maxLength={100}
           />
-          <p className="invisible text-lg text-red-500 peer-invalid:peer-focus:visible">
+          <p
+            className={`text-sm text-red-500 md:text-lg ${touchedFields.email && !formData.email.match(/^\S+@\S+\.\S+$/) ? "visible" : "invisible"} `}
+          >
             Please enter a valid email address
           </p>
         </div>
         <div className="flex flex-col gap-2">
           <label className="form__label" htmlFor="message">
-            Message:
+            Message
           </label>
           <textarea
             id="message"
             name="message"
-            className="form__input peer"
+            className={`form__input peer ${touchedFields.message && !formData.message ? "border-red-500" : ""}`}
             value={formData.message}
             onChange={handleChange}
+            onBlur={() => handleBlur("message")}
             required
             maxLength={400}
             rows={6}
           />
-          <p className="invisible text-lg text-red-500 peer-invalid:peer-focus:visible">
+          <p
+            className={`text-sm text-red-500 md:text-lg ${touchedFields.message && !formData.message ? "visible" : "invisible"}`}
+          >
             Please enter your message
           </p>
         </div>

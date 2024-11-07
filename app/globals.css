@@ -49,9 +49,9 @@ main h4 {
 }
 
 .form__input {
-  @apply mx-4 rounded-md bg-zinc-200 p-2 shadow-lg invalid:border-red-500 invalid:text-red-500 focus:outline dark:bg-sky-900;
+  @apply mx-auto w-full rounded-md bg-zinc-200 p-2 shadow-lg invalid:border-red-500 invalid:text-red-500 focus:outline dark:bg-sky-900;
 }
 
 .form__label {
-  @apply text-xl font-semibold;
+  @apply text-lg font-semibold md:text-xl;
 }

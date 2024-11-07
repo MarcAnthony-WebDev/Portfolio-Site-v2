@@ -26,7 +26,11 @@ const Footer = () => {
           return (
             <li key={link.name}>
               <button className="rounded-full p-2 hover:bg-light-bg-hover dark:hover:bg-dark-bg-hover">
-                <Link href={link.href}>
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {LinkIcon && (
                     <LinkIcon className="h-full w-full text-light-color transition duration-200 hover:rotate-3 dark:text-dark-color" />
                   )}
