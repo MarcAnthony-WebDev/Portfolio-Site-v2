@@ -14,25 +14,41 @@ const About = () => {
         <div className="text-group flex flex-col gap-2">
           <h4 className="">HOW IT STARTED</h4>
           <p>
-            I got into programming in 2017 when I was still a bartender. I
-            started messing arond with Python but things really started taking
-            traction when I first discovered web development. There&apos;s just
-            something about seeing your designs come to life on a web page that
-            really attracted me.
+            Based in Long Island, NY, I got into programming in 2017 when I was
+            still a bartender. I first started messing around with Python and
+            Java. I remember my first project, a tip out calculator for my
+            fellow bartenders. The program would take in the total tips as an
+            input and output the share for each bartender and barback. It was a
+            simple project but it really ignited my passion for programming. I
+            soon after learned the core Web Development stack and later on
+            specialized in React and Next.js.
           </p>
         </div>
         <div className="text-group flex flex-col gap-2">
           <h4 className="">HOW IT&apos;S GOING</h4>
           <p>
             Since I started in web development, I have worked at some great
-            companies, met loads of fantastic people in the communnity,
-            regularly joining meetups in NYC, and found my passion in life.
+            companies, met loads of fantastic people in the community, regularly
+            joining meetups in NYC, and found my passion in life. I also met the
+            love of my life and we married in 2024 😀.
           </p>
         </div>
         <div className="text-group flex flex-col gap-2">
+          <h4 className="">MY INTERESTS</h4>
+          <p>
+            My interests include many things such as playing the guitar, reading
+            short stories, particularly those of the Russian greats such as
+            Chekhov and Dostoyevsky, and watching Tarantino films. On my free
+            time you can find me building out small projects and web apps. I
+            really enjoy creating things that expedite my life in some way.
+          </p>
+        </div>
+
+        <div className="text-group flex flex-col gap-2">
           <h4 className="">HOW TO FIND ME</h4>
           <p>
-            I&apos;d love to hear from you! You can find me on{" "}
+            I&apos;d love to hear from you! Whether is be for work,
+            collaboration on a project or just to connect, you can find me on{" "}
             <Link
               className="font-bold hover:underline"
               href="https://tinyurl.com/mu88t4s9"
@@ -51,7 +67,8 @@ const About = () => {
             or you can send me an{" "}
             <Link href="contact" className="font-bold hover:underline">
               Email Here
-            </Link>{" "}
+            </Link>
+            .
           </p>
           <Link
             passHref
