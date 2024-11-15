@@ -20,7 +20,7 @@ export default function Home() {
         <div className="text-group flex flex-col gap-2">
           <h4 className="">ABOUT ME</h4>
           <p>
-            I enjoy all things web design andI use technologies like React,
+            I enjoy all things web design and I use technologies like React,
             TypeScript, Next.js & Tailwind CSS to build fast and clean websites
             & web applications.
           </p>
