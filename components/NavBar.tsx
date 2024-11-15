@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Menu } from "lucide-react";
+import ThemeToggler from "./ThemeToggler";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,12 +51,18 @@ const NavBar = () => {
               />
             </Link>
           </div>
-          <button
-            className={`sm:hidden ${isOpen ? "hidden" : "block"}`}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <Menu className="text-light-color dark:text-dark-color" />
-          </button>
+          <div className="flex">
+            <ThemeToggler
+              styles={`sm:hidden ml-auto mr-2 ${isOpen ? "hidden" : ""}`}
+            />
+            <button
+              className={`sm:hidden ${isOpen ? "hidden" : "block"}`}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <Menu className="text-light-color dark:text-dark-color" />
+            </button>
+          </div>
+
           <div
             className={`nav-container ${isOpen ? "block" : "hidden"} sm:block`}
           >

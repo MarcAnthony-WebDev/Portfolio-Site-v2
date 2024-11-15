@@ -62,7 +62,7 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
           </li>
         );
       })}
-      <li>
+      <li className="sm:self-center md:self-start">
         <ThemeToggler />
       </li>
     </ul>

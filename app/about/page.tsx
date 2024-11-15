@@ -14,23 +14,30 @@ const About = () => {
         <div className="text-group flex flex-col gap-2">
           <h4 className="">HOW IT STARTED</h4>
           <p>
-            Based in Long Island, NY, I got into programming in 2017 when I was
-            still a bartender. I first started messing around with Python and
-            Java. I remember my first project, a tip out calculator for my
-            fellow bartenders. The program would take in the total tips as an
-            input and output the share for each bartender and barback. It was a
-            simple project but it really ignited my passion for programming. I
-            soon after learned the core Web Development stack and later on
-            specialized in React and Next.js.
+            Based in Long Island, NY, my journey into programming began in 2017
+            while I was working as a bartender. It all started with tinkering
+            around with Python and Java, leading to my very first project: a
+            tip-out calculator for my fellow bartenders. The program calculated
+            each bartender’s and barback’s share of the total tips—a simple
+            idea, but one that sparked my passion for coding. From there, I dove
+            into the core web development stack, building a solid foundation.
+            Over time, I honed my skills further, specializing in React and
+            Next.js, and turning my curiosity into a career I love.
           </p>
         </div>
         <div className="text-group flex flex-col gap-2">
           <h4 className="">HOW IT&apos;S GOING</h4>
           <p>
-            Since I started in web development, I have worked at some great
-            companies, met loads of fantastic people in the community, regularly
-            joining meetups in NYC, and found my passion in life. I also met the
-            love of my life and we married in 2024 😀.
+            Since I started my journey in web development, I’ve had the
+            privilege of working at some amazing companies, building
+            professional websites for clients that truly make an impact. Along
+            the way, I’ve met incredible people in the tech community, regularly
+            attending meetups in NYC to exchange ideas and grow my skills.
+            Through this career, I’ve discovered not only my passion for
+            creating exceptional web experiences but also a deep connection to
+            the vibrant, creative community that fuels it. On a personal note,
+            2024 was a milestone year for me—I married the love of my life,
+            making my journey even more meaningful. 😊
           </p>
         </div>
         <div className="text-group flex flex-col gap-2">
@@ -47,7 +54,7 @@ const About = () => {
         <div className="text-group flex flex-col gap-2">
           <h4 className="">HOW TO FIND ME</h4>
           <p>
-            I&apos;d love to hear from you! Whether is be for work,
+            I&apos;d love to hear from you! Whether it be for work,
             collaboration on a project or just to connect, you can find me on{" "}
             <Link
               className="font-bold hover:underline"
