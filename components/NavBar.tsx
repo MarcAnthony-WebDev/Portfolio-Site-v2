@@ -53,13 +53,17 @@ const NavBar = () => {
           </div>
           <div className="flex">
             <ThemeToggler
+              size={32}
               styles={`sm:hidden ml-auto mr-2 ${isOpen ? "hidden" : ""}`}
             />
             <button
               className={`sm:hidden ${isOpen ? "hidden" : "block"}`}
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen((prev) => !prev)}
             >
-              <Menu className="text-light-color dark:text-dark-color" />
+              <Menu
+                size={32}
+                className="text-light-color dark:text-dark-color"
+              />
             </button>
           </div>
 

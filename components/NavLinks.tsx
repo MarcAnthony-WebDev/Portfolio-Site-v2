@@ -31,7 +31,7 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
       {isOpen && (
         <li className={`self-end pr-5 sm:hidden`}>
           <button onClick={closeMenu}>
-            <X className="text-light-color dark:text-dark-color" />
+            <X size={32} className="text-light-color dark:text-dark-color" />
           </button>
         </li>
       )}
@@ -54,7 +54,7 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
               {LinkIcon && (
                 <LinkIcon
                   className="text-light-color dark:text-dark-color"
-                  size={18}
+                  size={22}
                 />
               )}
               <p className="flex-1 text-center md:text-left">{link.name}</p>
@@ -63,7 +63,7 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
         );
       })}
       <li className="sm:self-center md:self-start">
-        <ThemeToggler />
+        <ThemeToggler styles="p-2 md:mt-[-10px]" size={22} />
       </li>
     </ul>
   );

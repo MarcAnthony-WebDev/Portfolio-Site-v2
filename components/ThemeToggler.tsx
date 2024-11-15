@@ -6,23 +6,24 @@ import { Moon, Sun } from "lucide-react";
 
 type ThemeTogglerProps = {
   styles?: string;
+  size?: number;
 };
 
-const ThemeToggler: React.FC<ThemeTogglerProps> = ({ styles }) => {
+const ThemeToggler: React.FC<ThemeTogglerProps> = ({ styles, size }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
   return (
     <button
-      className={`duration-300focus:outline-none flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-light-bg-hover hover:dark:bg-dark-bg-hover ${styles}`}
+      className={`duration-300focus:outline-none flex items-center justify-center rounded-full transition-all hover:bg-light-bg-hover hover:dark:bg-dark-bg-hover ${styles}`}
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       aria-label="Toggle Dark Mode"
     >
       {theme === "light" ? (
-        <Moon className="h-5 w-5 text-neutral-900" />
+        <Moon size={size} className="text-neutral-900" />
       ) : (
-        <Sun className="h-5 w-5 text-neutral-100" />
+        <Sun size={size} className="text-neutral-100" />
       )}
     </button>
   );
