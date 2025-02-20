@@ -5,6 +5,7 @@ import { FileText, ArrowRight, Github } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
+  console.log('new branch changes')
   return (
     <div className="container-styles">
       <div className="heading-container flex flex-col">
