@@ -11,14 +11,14 @@ const hostEmail = process.env.E_ADDRESS;
 
 export async function POST(request: Request) {
   try {
-    const { firstName, email, message, inquiryType, phone, company } = await request.json();
+    const { firstName, lastName, email, message, inquiryType, phone, company } = await request.json();
 
     // Send email to yourself (admin)
     const adminEmailResponse = await resend.emails.send({
       from: `Marcanthony Tumminello <${hostEmail}>`,
       to: hostEmail,
       subject: "New Contact Form Submission",
-      react: EmailTemplate({ firstName, email, message, inquiryType, phone, company, isAdmin: true }), // Admin template
+      react: EmailTemplate({ firstName, lastName, email, message, inquiryType, phone, company, isAdmin: true }), // Admin template
     });
 
     if (adminEmailResponse.error) {
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       from: `Marcanthony Tumminello <${hostEmail}>`,
       to: [email],
       subject: "Thanks for viewing my site!",
-      react: EmailTemplate({ firstName, email, message, inquiryType, phone, company }), // User template
+      react: EmailTemplate({ firstName, lastName, email, message, inquiryType, phone, company }), // User template
     });
 
     if (userEmailResponse.error) {
