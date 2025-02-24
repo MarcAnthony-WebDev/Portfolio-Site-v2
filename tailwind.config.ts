@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 import colors from "tailwindcss/colors";
 
@@ -31,6 +32,15 @@ const config: Config = {
         //custom tailwind text color class
         "light-color": colors.neutral[800],
         "dark-color": colors.neutral[100],
+      },
+      keyframes : {
+        fadeInDown:{
+          '0%':{opacity:0, transform: 'translateY(-20px)'},
+          '100%':{opacity:1, transform: 'translateY(0)'},
+        },
+      },
+      animation: {
+        fadeInDown: 'fadeInDown 0.3s ease-out forwards',
       },
     },
     screens: {

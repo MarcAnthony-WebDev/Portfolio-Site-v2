@@ -8,7 +8,7 @@ import CustomButton from "./CustomButton";
 import Modal from "./Modal";
 
 const ContactForm: React.FC = () => {
-  
+
   console.log('vercel log')
 
   const {
@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
