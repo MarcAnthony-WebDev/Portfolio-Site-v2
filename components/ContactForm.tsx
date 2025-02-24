@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
