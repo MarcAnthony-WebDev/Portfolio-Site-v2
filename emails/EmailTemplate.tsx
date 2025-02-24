@@ -15,14 +15,22 @@ import colors from "tailwindcss/colors";
 
 interface EmailTemplateProps {
   firstName: string;
+  lastName:string;
   email: string;
+  phone?:string;
+  company?:string;
+  inquiryType: string[];
   message: string;
   isAdmin?: boolean;
 }
 
 export const EmailTemplate = ({
   firstName,
+  lastName,
   email,
+  phone,
+  company,
+  inquiryType,
   message,
   isAdmin = false,
 }: EmailTemplateProps & { isAdmin?: boolean }) => (
@@ -45,9 +53,15 @@ export const EmailTemplate = ({
         {isAdmin ? (
           <>
             <Text style={paragraph}>
-              New message from {firstName} ({email}):
+              <strong>New message from:</strong> {firstName} {lastName} ({email})
             </Text>
-            <Text style={paragraph}>{message}</Text>
+
+            {phone && <Text style={paragraph}><strong>Phone:</strong> {phone}</Text>}
+            {company && <Text style={paragraph}><strong>Company:</strong> {company}</Text>}
+            
+            <Text style={paragraph}><strong>Inquiry Type:</strong> {inquiryType}</Text>
+            <Text style={paragraph}><strong>Message:</strong> {message}</Text>
+
             <Text style={paragraph}>This is an admin notification.</Text>
           </>
         ) : (
