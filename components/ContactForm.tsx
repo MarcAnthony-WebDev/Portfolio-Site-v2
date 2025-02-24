@@ -8,6 +8,9 @@ import CustomButton from "./CustomButton";
 import Modal from "./Modal";
 
 const ContactForm: React.FC = () => {
+  
+  console.log('vercel log')
+
   const {
     register,
     handleSubmit,
