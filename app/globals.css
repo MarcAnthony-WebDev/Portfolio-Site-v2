@@ -29,11 +29,15 @@ body {
 }
 
 main p {
-  @apply text-xl md:text-2xl;
+  @apply text-xl md:text-xl;
+}
+
+main a {
+  @apply text-xl md:text-xl;
 }
 
 main h4 {
-  @apply text-xl font-bold md:text-2xl;
+  @apply mb-4 text-xl font-bold md:text-2xl;
 }
 
 .flex-center {

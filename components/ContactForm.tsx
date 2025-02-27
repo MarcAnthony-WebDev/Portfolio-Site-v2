@@ -1,17 +1,16 @@
 "use client";
 import { useState } from "react";
+import { PatternFormat } from "react-number-format";
 
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ContactFormValues, contactFormSchema } from "@/lib/validation";
 import CustomButton from "./CustomButton";
 import Modal from "./Modal";
 
 const ContactForm: React.FC = () => {
-
-  console.log('vercel log')
-
   const {
+    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -44,101 +43,172 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center py-16 bg-gray-100 dark:bg-gray-900">
+    <div className="flex justify-center bg-gray-100 py-16 dark:bg-gray-900">
       <form
-        className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 md:p-12"
+        className="w-full max-w-4xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800 md:p-12"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <h2 className="text-center text-3xl font-bold text-gray-900 dark:text-white mb-6">
+        <h2 className="mb-6 text-center text-3xl font-bold text-gray-900 dark:text-white">
           Let&apos;s Connect!
         </h2>
 
         {/* Grid Layout - Two Columns */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2">
-
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {/* First Name */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">First Name</label>
+            <label className="block text-gray-700 dark:text-gray-300">
+              First Name
+            </label>
             <input
               type="text"
               {...register("firstName")}
-              className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600"
+              className="w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
             />
-            {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>}
+            {errors.firstName && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.firstName.message}
+              </p>
+            )}
           </div>
 
           {/* Last Name */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">Last Name</label>
+            <label className="block text-gray-700 dark:text-gray-300">
+              Last Name
+            </label>
             <input
               type="text"
               {...register("lastName")}
-              className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600"
+              className="w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
             />
-            {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>}
+            {errors.lastName && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.lastName.message}
+              </p>
+            )}
           </div>
 
           {/* Email */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">Email</label>
+            <label className="block text-gray-700 dark:text-gray-300">
+              Email
+            </label>
             <input
               type="email"
               {...register("email")}
-              className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600"
+              className="w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
             />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+            {errors.email && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.email.message}
+              </p>
+            )}
           </div>
 
           {/* Phone */}
+          {/* <div> */}
+          {/*   <label className="block text-gray-700 dark:text-gray-300">Phone Number</label> */}
+          {/*   <input */}
+          {/*     type="tel" */}
+          {/*     {...register("phone")} */}
+          {/*     className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600" */}
+          {/*   /> */}
+          {/*   {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>} */}
+          {/* </div> */}
+
+          {/* new input phone */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">Phone Number</label>
-            <input
-              type="tel"
-              {...register("phone")}
-              className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600"
+            <label className="block text-gray-700 dark:text-gray-300">
+              Phone Number
+            </label>
+            <Controller
+              control={control}
+              name="phone"
+              render={({ field: { onChange, onBlur, value, ref } }) => (
+                <PatternFormat
+                  getInputRef={ref}
+                  onValueChange={(values) => onChange(values.value)}
+                  onBlur={onBlur}
+                  value={value}
+                  format="+1 (###) ###-####"
+                  mask="_"
+                  type="tel"
+                  className={`w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700 ${errors.phone ? "border-red-500" : ""}`}
+                />
+              )}
             />
-            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
+            {errors.phone && (
+              <p className="border-red-500 text-sm">{errors.phone.message}</p>
+            )}
           </div>
 
           {/* Company Name */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">Company Name</label>
+            <label className="block text-gray-700 dark:text-gray-300">
+              Company Name
+            </label>
             <input
               type="text"
               {...register("company")}
-              className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600"
+              className="w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
             />
-            {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company.message}</p>}
+            {errors.company && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.company.message}
+              </p>
+            )}
           </div>
 
           {/* Inquiry Type */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">Inquiry Type</label>
-            <select {...register("inquiryType")} defaultValue="" className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600">
-              <option value="" disabled>--- Select an option ---</option>
+            <label className="block text-gray-700 dark:text-gray-300">
+              Inquiry Type
+            </label>
+            <select
+              {...register("inquiryType")}
+              defaultValue=""
+              className="w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
+            >
+              <option value="" disabled>
+                --- Select an option ---
+              </option>
               <option value="quote">Request a Quote</option>
               <option value="general">General Inquiry</option>
               <option value="employment">Employment Opportunity</option>
               <option value="contract">Contract Work</option>
             </select>
-            {errors.inquiryType && <p className="text-red-500 text-sm mt-1">{errors.inquiryType.message}</p>}
+            {errors.inquiryType && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.inquiryType.message}
+              </p>
+            )}
           </div>
 
           {/* Message - Full Width */}
           <div className="md:col-span-2">
-            <label className="block text-gray-700 dark:text-gray-300">Message</label>
+            <label className="block text-gray-700 dark:text-gray-300">
+              Message
+            </label>
             <textarea
               rows={6}
               {...register("message")}
-              className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600 max-h-48"
+              className="max-h-48 w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
             />
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
+            {errors.message && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.message.message}
+              </p>
+            )}
           </div>
         </div>
 
         {/* Submit Button */}
-        <div className="flex justify-center mt-6">
-          <CustomButton type="submit" text="Send Message" loading={isSubmitting} />
+        <div className="mt-6 flex justify-center">
+          <CustomButton
+            type="submit"
+            text="Send Message"
+            loading={isSubmitting}
+          />
         </div>
       </form>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

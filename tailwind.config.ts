@@ -27,23 +27,26 @@ const config: Config = {
         "light-bg-hover": colors.neutral[300],
         "dark-bg": colors.gray[900],
         "dark-bg-hover": colors.slate[700],
+        "accent": colors.neutral[200],
+        "accent-dark": colors.slate[800],
       },
       textColor: {
         //custom tailwind text color class
         "light-color": colors.neutral[800],
         "dark-color": colors.neutral[100],
       },
-      keyframes : {
-        fadeInDown:{
-          '0%':{opacity:'0', transform: 'translateY(-20px)'},
-          '100%':{opacity:'1', transform: 'translateY(0)'},
+      keyframes: {
+        fadeInDown: {
+          "0%": { opacity: "0", transform: "translateY(-20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
-        fadeInDown: 'fadeInDown 0.3s ease-out forwards',
+        fadeInDown: "fadeInDown 0.3s ease-out forwards",
       },
     },
     screens: {
+      xs: "450px",
       sm: "800px",
       md: "1000px",
     },

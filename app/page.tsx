@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="container-styles">
       <div className="heading-container flex flex-col">
-        <h2 className="text-5xl font-bold md:text-6xl">
+        <h2 className="sm:text-5xl text-3xl font-bold md:text-6xl">
           Hello I&apos;m Marcanthony
         </h2>
         <p className="text-3xl">I am a React Developer</p>

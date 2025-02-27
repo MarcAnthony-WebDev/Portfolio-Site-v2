@@ -14,7 +14,7 @@ export const contactFormSchema = z.object({
     .max(100),
 
   phone: z.string()
-    .regex(/^\+?[1-9]\d{1,14}$/, { message: "Invalid phone number format" })
+    .regex(/^\+1 \(\d{3}\) \d{3}-\d{4}$/, { message: "Invalid phone number format" })
     .optional(),
 
   company: z.string()

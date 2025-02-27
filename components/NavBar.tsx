@@ -34,12 +34,12 @@ const NavBar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <div className="nav-container relative col-span-1 row-span-2 h-full bg-light-bg outline outline-1 outline-neutral-200 dark:bg-dark-bg dark:outline-neutral-700 md:min-h-full">
+    <div className="nav-container w-full relative col-span-1 row-span-2 h-full bg-accent outline outline-1 outline-neutral-200 dark:bg-accent-dark dark:outline-neutral-700 md:min-h-full">
       <div className={`${isFixed ? "h-48" : "h-0"}`}></div>
       <aside
         className={`md:p-5" top-0 flex h-max p-2 transition duration-200 md:fixed ${isFixed ? "fixed left-0 right-0 top-0 z-10 w-full bg-neutral-100 shadow-md dark:bg-slate-700" : "relative"}`}
       >
-        <nav className="nav flex w-full items-center justify-between md:h-full md:flex-col md:items-start md:gap-10">
+        <nav className="nav px-6 py-2 md:p-0 flex w-full items-center justify-between md:h-full md:flex-col md:items-start md:gap-4">
           <div className="image-container h-20 w-20 md:h-40 md:w-40">
             <Link href="/" passHref className="h-full w-full">
               <Image
@@ -54,10 +54,10 @@ const NavBar = () => {
           <div className="flex">
             <ThemeToggler
               size={32}
-              styles={`sm:hidden ml-auto mr-2 ${isOpen ? "hidden" : ""}`}
+              styles={`md:hidden ml-auto mr-2 ${isOpen ? "hidden" : ""}`}
             />
             <button
-              className={`sm:hidden ${isOpen ? "hidden" : "block"}`}
+              className={`md:hidden ${isOpen ? "hidden" : "block"}`}
               onClick={() => setIsOpen((prev) => !prev)}
             >
               <Menu
@@ -68,7 +68,7 @@ const NavBar = () => {
           </div>
 
           <div
-            className={`nav-container ${isOpen ? "block" : "hidden"} sm:block`}
+            className={`nav-container md:w-full w-max ${isOpen ? "block" : "hidden"} md:block`}
           >
             <NavLinks isOpen={isOpen} closeMenu={closeMenu} />
           </div>
