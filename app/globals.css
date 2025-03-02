@@ -59,3 +59,21 @@ main h4 {
 .form__label {
   @apply text-lg font-semibold md:text-xl;
 }
+
+/*Toggle Button styles*/
+
+/*.toggle-button__div {*/
+/*  @apply absolute bottom-0 left-0 right-0 top-0 cursor-pointer rounded-lg bg-zinc-600 transition duration-200;*/
+/*}*/
+/**/
+/*.toggle-button__div:before {*/
+/*  @apply absolute bottom-1 left-1 z-10 h-6 w-6 rounded-full bg-amber-300 transition duration-200 content-[''];*/
+/*}*/
+/**/
+/*.toggle-button__input:checked+.toggle-button__div:before {*/
+/*  @apply translate-x-full transform;*/
+/*}*/
+
+/*.toggle-button__input:checked+.toggle-button__div {*/
+/*  @apply bg-zinc-400;*/
+/*}*/

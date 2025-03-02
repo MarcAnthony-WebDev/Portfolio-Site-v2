@@ -74,8 +74,8 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
           </li>
         );
       })}
-      <li className="md:self-start">
-        <ThemeToggler styles="p-2 md:mt-[-10px]" size={22} />
+      <li className="md:self-start md:w-1/2 w-1/4 h-[15px]">
+        <ThemeToggler styles="p-2 md:mt-[-10px]" size={24} />
       </li>
     </ul >
   );

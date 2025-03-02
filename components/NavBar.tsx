@@ -51,20 +51,25 @@ const NavBar = () => {
               />
             </Link>
           </div>
-          <div className="flex">
-            <ThemeToggler
-              size={32}
-              styles={`md:hidden ml-auto mr-2 ${isOpen ? "hidden" : ""}`}
-            />
-            <button
-              className={`md:hidden ${isOpen ? "hidden" : "block"}`}
-              onClick={() => setIsOpen((prev) => !prev)}
-            >
-              <Menu
-                size={32}
-                className="text-light-color dark:text-dark-color"
+          <div className="flex w-full h-full items-center justify-end gap-2">
+            <div className="w-24 h-[32px]">
+              <ThemeToggler
+                size={24}
+                styles={`md:hidden ml-auto mr-2 w-full ${isOpen ? "hidden" : ""}`}
               />
-            </button>
+            </div>
+            <div>
+              <button
+                className={`md:hidden ${isOpen ? "hidden" : "block"}`}
+                onClick={() => setIsOpen((prev) => !prev)}
+              >
+                <Menu
+                  size={32}
+                  className="text-light-color dark:text-dark-color"
+                />
+              </button>
+
+            </div>
           </div>
 
           <div
