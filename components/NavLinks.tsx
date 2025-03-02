@@ -51,7 +51,7 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
               className={clsx(
                 "text-md flex items-start gap-4 rounded-md p-2 font-medium text-light-color transition duration-200 hover:bg-light-bg-hover dark:text-dark-color dark:hover:bg-dark-bg-hover",
                 {
-                  "bg-neutral-200 dark:bg-slate-600": pathname === link.href,
+                  "bg-neutral-300 dark:bg-slate-600": pathname === link.href,
                 },
                 "w-full",
               )}
@@ -75,7 +75,7 @@ const NavLinks = ({ isOpen, closeMenu }: NavLinksProps) => {
         );
       })}
       <li className="md:self-start md:w-1/2 w-1/4 h-[15px]">
-        <ThemeToggler styles="p-2 md:mt-[-10px]" size={24} />
+        <ThemeToggler styles="p-2 md:mt-[-10px]" size={20} />
       </li>
     </ul >
   );
