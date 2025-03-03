@@ -57,7 +57,7 @@ const GalleryCard = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="w-52 self-center rounded-3xl bg-slate-600 p-2 text-white transition duration-200 hover:bg-slate-500 active:translate-y-1">
+            <button className="portfolio-button">
               Visit Website
             </button>
           </Link>
@@ -72,7 +72,7 @@ const GalleryCard = ({
           passHref
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl font-bold transition duration-150 hover:underline"
+          className="text-2xl font-poppins font-medium transition duration-150 hover:underline"
         >
           {title}
         </Link>
@@ -80,7 +80,7 @@ const GalleryCard = ({
         <p className="text-xl">{description}</p>
       </div>
       <div className="button-container mt-auto">
-        <button className="w-52 self-center rounded-3xl bg-slate-600 p-2 text-white transition duration-200 hover:bg-slate-500 active:translate-y-1">
+        <button className="portfolio-button">
           Visit Website
         </button>
       </div>

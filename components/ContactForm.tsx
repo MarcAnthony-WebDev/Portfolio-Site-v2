@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
         className="w-full max-w-4xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800 md:p-12"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <h2 className="mb-6 text-center text-3xl font-bold text-gray-900 dark:text-white">
+        <h2 className="mb-6 text-center text-3xl font-bold text-gray-900 dark:text-white page-heading">
           Let&apos;s Connect!
         </h2>
 
@@ -56,7 +56,7 @@ const ContactForm: React.FC = () => {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {/* First Name */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">
+            <label className="form__label block text-gray-700 dark:text-gray-300">
               First Name
             </label>
             <input
@@ -73,7 +73,7 @@ const ContactForm: React.FC = () => {
 
           {/* Last Name */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">
+            <label className="form__label block text-gray-700 dark:text-gray-300">
               Last Name
             </label>
             <input
@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
 
           {/* Email */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">
+            <label className="form__label block text-gray-700 dark:text-gray-300">
               Email
             </label>
             <input
@@ -105,20 +105,9 @@ const ContactForm: React.FC = () => {
             )}
           </div>
 
-          {/* Phone */}
-          {/* <div> */}
-          {/*   <label className="block text-gray-700 dark:text-gray-300">Phone Number</label> */}
-          {/*   <input */}
-          {/*     type="tel" */}
-          {/*     {...register("phone")} */}
-          {/*     className="w-full p-3 border rounded-md dark:bg-gray-700 dark:border-gray-600" */}
-          {/*   /> */}
-          {/*   {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>} */}
-          {/* </div> */}
-
           {/* new input phone */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">
+            <label className="form__label block text-gray-700 dark:text-gray-300">
               Phone Number
             </label>
             <Controller
@@ -144,7 +133,7 @@ const ContactForm: React.FC = () => {
 
           {/* Company Name */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">
+            <label className="form__label block text-gray-700 dark:text-gray-300">
               Company Name
             </label>
             <input
@@ -161,18 +150,18 @@ const ContactForm: React.FC = () => {
 
           {/* Inquiry Type */}
           <div>
-            <label className="block text-gray-700 dark:text-gray-300">
+            <label className="form__label block text-gray-700 dark:text-gray-300">
               Inquiry Type
             </label>
             <select
               {...register("inquiryType")}
               defaultValue=""
-              className="w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
+              className="w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700 bg-neutral-200 cursor-pointer"
             >
               <option value="" disabled>
                 --- Select an option ---
               </option>
-              <option value="quote">Request a Quote</option>
+              <option className="" value="quote">Request a Quote</option>
               <option value="general">General Inquiry</option>
               <option value="employment">Employment Opportunity</option>
               <option value="contract">Contract Work</option>
@@ -183,16 +172,16 @@ const ContactForm: React.FC = () => {
               </p>
             )}
           </div>
-
+          
           {/* Message - Full Width */}
           <div className="md:col-span-2">
-            <label className="block text-gray-700 dark:text-gray-300">
+            <label className="form__label block text-gray-700 dark:text-gray-300">
               Message
             </label>
             <textarea
               rows={6}
               {...register("message")}
-              className="max-h-48 w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
+              className="form__textarea max-h-48 w-full rounded-md border p-3 dark:border-gray-600 dark:bg-gray-700"
             />
             {errors.message && (
               <p className="mt-1 text-sm text-red-500">

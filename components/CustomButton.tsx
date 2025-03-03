@@ -9,7 +9,7 @@ type CustomButtonType = ButtonHTMLAttributes<HTMLButtonElement> & {
 const CustomButton = ({ text, loading, ...props }: CustomButtonType) => {
   return (
     <button
-      className="mt-3 w-52 self-center rounded-3xl bg-slate-600 p-2 text-white transition duration-200 hover:bg-slate-500 active:translate-y-1"
+      className="mt-3 w-52 self-center rounded-3xl dark:bg-slate-600 p-2 dark:text-dark-color text-light-color bg-neutral-300 transition duration-200 dark:hover:bg-slate-500 hover:bg-neutral-400 active:translate-y-1"
       {...props}
     >
       {loading ? (

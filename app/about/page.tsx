@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="container-styles">
       <div className="heading-container">
-        <h2 className="text-5xl font-bold md:text-6xl">A Bit About Me</h2>
+        <h2 className="page-heading">A Bit About Me</h2>
       </div>
       <div className="text-container flex flex-col gap-12 leading-loose">
         <div className="text-group flex flex-col gap-2">

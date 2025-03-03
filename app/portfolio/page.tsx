@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className="main-color-styles h-full w-full">
       <div className="heading-container flex w-full flex-col items-center justify-center gap-4 p-4">
-        <h2 className="heading text-center text-5xl font-bold md:text-6xl">
+        <h2 className="page-heading text-center">
           My Recent Work
         </h2>
         <p className="text-center">Below you can view all of my recent work.</p>

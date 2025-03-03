@@ -39,7 +39,7 @@ const NavBar = () => {
       <aside
         className={`md:p-5" top-0 flex h-max p-2 transition duration-200 md:fixed ${isFixed ? "fixed left-0 right-0 top-0 z-10 w-full bg-neutral-100 shadow-md dark:bg-slate-700" : "relative"}`}
       >
-        <nav className="nav px-6 py-2 md:p-0 flex w-full items-center justify-between md:h-full md:flex-col md:items-start md:gap-4">
+        <nav className="nav flex w-full items-center justify-between md:h-full md:flex-col md:items-start md:gap-4">
           <div className="image-container h-20 w-24 md:h-40 md:w-40">
             <Link href="/" passHref className="h-full w-full">
               <Image

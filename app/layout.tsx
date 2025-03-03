@@ -1,13 +1,25 @@
 // "use client";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, DM_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { NavBar, Footer } from "@/components";
 
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter"
+});
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans"
+})
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ['300', '400', '500']
+})
 
 export const metadata: Metadata = {
   title: "Marcanthony's Portfolio",
@@ -25,7 +37,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/MT-logo-bold.png"></link>
       </head>
       <body
-        className={`${inter.className} text-light-colordark:text-dark-color`}
+        className={`${inter.variable} ${dmSans.variable} ${poppins.variable} text-light-color dark:text-dark-color`}
       >
         <Providers>
           <div className="site-container mx-auto flex min-h-screen flex-col bg-light-bg transition duration-200 dark:bg-dark-bg md:grid md:grid-cols-main-columns md:grid-rows-[1fr_75px]">

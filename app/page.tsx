@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="container-styles">
       <div className="heading-container flex flex-col">
-        <h2 className="sm:text-5xl text-3xl font-bold md:text-6xl">
+        <h2 className="page-heading">
           Hello I&apos;m Marcanthony
         </h2>
         <p className="text-3xl">I am a React Developer</p>
@@ -62,7 +62,7 @@ export default function Home() {
             passHref
             rel="noopener noreferrer"
           >
-            <button className="mt-3 flex w-52 items-center justify-center gap-2 rounded-md bg-neutral-300 p-2 text-light-color transition duration-200 hover:bg-neutral-400 active:translate-y-1 dark:bg-slate-500 dark:text-dark-color hover:dark:bg-slate-600">
+            <button className="mt-3 text-[18px] flex w-52 items-center justify-center gap-2 rounded-md bg-neutral-300 p-2 text-light-color transition duration-200 hover:bg-neutral-400 active:translate-y-1 dark:bg-slate-600 dark:text-dark-color hover:dark:bg-slate-500">
               <FileText />
               See My Resume
             </button>
