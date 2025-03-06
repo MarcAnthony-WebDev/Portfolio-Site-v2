@@ -26,7 +26,7 @@ const GalleryCard = ({
   toColor = "to-green-50",
 }: GalleryCardType) => {
   return (
-    <div className="flex h-full max-w-[900px] flex-col items-center gap-2">
+    <div className="flex h-full max-w-[900px] flex-col items-center gap-4">
       <div className="gallery-card group relative h-[300px] w-[90vw] rounded-sm from-blue-300 to-blue-800 sm:w-[600px]">
         <Image
           src={src}
@@ -66,7 +66,7 @@ const GalleryCard = ({
           </button> */}
         </div>
       </div>
-      <div className="content-box flex flex-col items-center gap-2 px-10">
+      <div className="content-box flex flex-col items-center gap-4 px-10">
         <Link
           href={href || "/"}
           passHref
@@ -78,11 +78,11 @@ const GalleryCard = ({
         </Link>
         {/* <h3 className="text-2xl font-bold">{title}</h3> */}
         <p className="text-xl">{description}</p>
-      </div>
-      <div className="button-container mt-auto">
-        <button className="portfolio-button">
-          Visit Website
-        </button>
+        <div className="button-container mt-auto">
+          <button className="portfolio-button">
+            Visit Website
+          </button>
+        </div>
       </div>
     </div>
   );

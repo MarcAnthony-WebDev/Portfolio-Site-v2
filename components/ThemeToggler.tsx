@@ -25,7 +25,7 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({ styles, size }) => {
         <div className='cursor-pointer toggle-button__div absolute inset-0 rounded-lg transition-transform duration-300 w-2/3 h-full'
           style={{ transform: theme === "dark" ? "translateX(calc(50% + 1px))" : "translateX(calc(0% - 1px))" }}
         >
-          <div className="absolute border border-solid border-neutral-500 dark:border-neutral-400 left-[0px] top-[0px] h-full w-full rounded-full bg-neutral-100 dark:bg-neutral-500 flex items-center justify-center transition-transform duration-300">
+          <div className="absolute border border-solid border-neutral-500 dark:border-neutral-400 left-[0px] top-[0px] h-full w-full rounded-full bg-neutral-100 dark:bg-gray-800 flex items-center justify-center transition-transform duration-300">
             {theme === 'dark' ? (
               <Moon size={size} className="text-neutral-100" />
             ) : (

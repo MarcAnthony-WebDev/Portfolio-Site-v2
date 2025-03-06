@@ -17,7 +17,7 @@ export const portfolioData: PortfolioItem[] = [
     href: "https://cipcofence.com",
     src: "/images/cipco-fence-screenshot.png",
     description:
-      "I built this website for Cipco Fence, focusing on a clean, user-friendly layout that highlights their services and expertise.",
+      "I built this website for Cipco Fence with a clean, user-friendly layout that highlights their services and expertise. The site features a smooth language changer that lets visitors switch between English and Spanish, along with full accessibility support—ensuring screen reader compatibility and intuitive keyboard navigation for an inclusive experience. Check it out!",
     fromColor: "from-lime-900",
     viaColor: "via-lime-500",
     toColor: "to-lime-50",

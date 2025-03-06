@@ -115,7 +115,7 @@ input {
   display: inline-flex;
   gap: 2rem;
   width: max-content;
-  animation: scroll 8s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .brands-wrapper svg:last-of-type {
