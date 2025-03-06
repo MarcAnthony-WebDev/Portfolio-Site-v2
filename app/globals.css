@@ -99,8 +99,37 @@ input {
   @apply w-52 self-center rounded-3xl bg-neutral-300 p-2 text-light-color transition duration-200 hover:bg-neutral-400 active:translate-y-1 dark:bg-slate-600 dark:text-dark-color;
 }
 
-.font-poppins{
-  font-family:var(--font-poppins), sans-serif;
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/*Brands Component*/
+.brands-container {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.brands-wrapper {
+  display: inline-flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll 8s linear infinite;
+}
+
+.brands-wrapper svg:last-of-type {
+  padding-left: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 1rem));
+  }
 }
 
 /*Toggle Button styles*/

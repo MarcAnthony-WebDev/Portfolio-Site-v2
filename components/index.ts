@@ -7,6 +7,7 @@ import CustomButton from "./CustomButton";
 import Modal from "./Modal";
 import GalleryCard from "./GalleryCard";
 import Brands from "./Brands";
+import Logos from "./Logos";
 
 export {
   NavBar,
@@ -17,4 +18,5 @@ export {
   Modal,
   GalleryCard,
   Brands,
+  Logos,
 };
