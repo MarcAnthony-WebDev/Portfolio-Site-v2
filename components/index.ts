@@ -8,6 +8,7 @@ import Modal from "./Modal";
 import GalleryCard from "./GalleryCard";
 import Brands from "./Brands";
 import Logos from "./Logos";
+import Timeline from "./Timeline";
 
 export {
   NavBar,
@@ -19,4 +20,5 @@ export {
   GalleryCard,
   Brands,
   Logos,
+  Timeline,
 };

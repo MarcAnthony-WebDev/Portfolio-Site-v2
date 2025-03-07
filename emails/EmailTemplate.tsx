@@ -39,7 +39,7 @@ export const EmailTemplate = ({
     <Preview>
       {isAdmin
         ? "New Contact Form Submission"
-        : "Thank you for reaching out to us!"}
+        : "Thank you for reaching out to me!"}
     </Preview>
     <Body style={main}>
       <Container style={container}>

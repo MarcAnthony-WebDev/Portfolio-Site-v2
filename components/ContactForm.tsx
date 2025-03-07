@@ -116,7 +116,7 @@ const ContactForm: React.FC = () => {
               render={({ field: { onChange, onBlur, value, ref } }) => (
                 <PatternFormat
                   getInputRef={ref}
-                  onValueChange={(values) => onChange(values.value)}
+                  onValueChange={(values) => onChange(values.formattedValue)}
                   onBlur={onBlur}
                   value={value}
                   format="+1 (###) ###-####"
@@ -127,7 +127,7 @@ const ContactForm: React.FC = () => {
               )}
             />
             {errors.phone && (
-              <p className="border-red-500 text-sm">{errors.phone.message}</p>
+              <p className="text-red-500 text-sm">{errors.phone.message}</p>
             )}
           </div>
 
