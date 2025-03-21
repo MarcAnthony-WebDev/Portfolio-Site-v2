@@ -15,7 +15,7 @@ const Brands = () => {
           {Logos.concat(Logos).map((logo:LogoType, index:number) =>(
             <div key={index} className="flex items-center gap-2">
               {logo.icon}
-              <span className="text-sm">{logo.label}</span>
+              <span className="text-sm text-nowrap">{logo.label}</span>
             </div>
           ) )}
         </div>

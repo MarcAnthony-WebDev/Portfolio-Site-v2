@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import { Github, Linkedin, House } from "lucide-react";
+import { Github, Linkedin, House, FileText } from "lucide-react";
 import Link from "next/link";
 import { Dock } from '@/components'
 
@@ -48,10 +48,18 @@ const Footer = () => {
         "_blank"
       ),
     },
+    {
+      icon: <FileText size={18} className="text-light-color dark:text-dark-color" />,
+      label: 'Resume',
+      onClick: () => window.open(
+        '/documents/Resume.pdf',
+        "_blank"
+      ),
+    },
   ]
 
   return (
-    <footer className="col-[2/3] border-t-[1px] border-t-neutral-300 dark:border-t-neutral-500 bg-light-bg dark:bg-dark-bg relative">
+    <footer className="col-[2/3] border-l-[1px] border-t-[1px] border-neutral-300 dark:border-neutral-500 bg-light-bg dark:bg-dark-bg relative">
 
       <div className="flex items-center justify-center py-4 h-[70px]">
         <Dock items={dockItems}
