@@ -35,6 +35,10 @@ const config: Config = {
         "light-color": colors.neutral[800],
         "dark-color": colors.neutral[100],
       },
+      borderColor:{
+        'light-color': colors.neutral[800],
+        'dark-color': colors.neutral[500],
+      },
       keyframes: {
         fadeInDown: {
           "0%": { opacity: "0", transform: "translateY(-20px)" },

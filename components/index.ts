@@ -9,6 +9,7 @@ import GalleryCard from "./GalleryCard";
 import Brands from "./Brands";
 import Logos from "./Logos";
 import Timeline from "./Timeline";
+import Dock from './Dock';
 
 export {
   NavBar,
@@ -21,4 +22,5 @@ export {
   Brands,
   Logos,
   Timeline,
+  Dock
 };
