@@ -6,7 +6,7 @@ import { portfolioData, portfolioFeature } from "./portfolioData";
 
 const page = () => {
   return (
-    <div className="main-color-styles h-full w-full flex flex-col gap-10">
+    <div className="main-color-styles center-container-styles h-full w-full flex flex-col gap-10">
       {/* Page Heading */}
       <div className="heading-container flex w-full flex-col items-center justify-center gap-4 p-4">
         <h2 className="page-heading text-center">Portfolio Highlights</h2>
@@ -17,7 +17,7 @@ const page = () => {
       </div>
 
       {/* Portfolio Section */}
-      <div className="portfolio-gallery-container flex flex-col w-full items-center gap-16 justify-center px-4 md:px-10">
+      <div className="portfolio-gallery-container flex flex-col w-full items-center gap-16 justify-center ">
 
         {/* Featured Project */}
         <section className="featured-project-section w-full flex justify-center items-center gap-10">

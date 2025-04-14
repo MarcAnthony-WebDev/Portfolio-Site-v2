@@ -111,7 +111,7 @@ const FeaturedCard = ({ id, src, title, description, href, alt }: FeaturedCardPr
             <motion.p
               key={index}
               variants={fadeInUp}
-              className="text-base leading-relaxed text-neutral-800 dark:text-neutral-300"
+              className="leading-relaxed text-neutral-800 dark:text-neutral-300"
             >
               {block.content}
             </motion.p>
@@ -151,7 +151,7 @@ const FeaturedCard = ({ id, src, title, description, href, alt }: FeaturedCardPr
                 <motion.ul
                   key={`tech-list-${index}`}
                   variants={fadeInUp}
-                  className="space-y-2 text-base text-neutral-800 dark:text-neutral-300"
+                  className="space-y-2 text-neutral-800 dark:text-neutral-300"
                 >
                   {block.content.map((item) => {
                     const Icon = getLogoIcon(item);
@@ -160,7 +160,7 @@ const FeaturedCard = ({ id, src, title, description, href, alt }: FeaturedCardPr
                         {Icon && (
                           <span className="mt-1 h-4 w-4 shrink-0">
                             {React.cloneElement(Icon as React.ReactElement, {
-                              className: "h-4 w-4 object-contain",
+                              className: "h-5 w-5 object-contain",
                             })}
                           </span>
                         )}
@@ -201,13 +201,13 @@ const FeaturedCard = ({ id, src, title, description, href, alt }: FeaturedCardPr
                 <motion.ul
                   key={`features-list-${index}`}
                   variants={fadeInUp}
-                  className="space-y-2 text-base text-neutral-800 dark:text-neutral-300"
+                  className="space-y-2 text-neutral-800 dark:text-neutral-300"
                 >
                   {block.content.map((item) => {
                     const Icon = getLucideIcon(item);
                     return (
                       <li key={item} className="flex items-start gap-2">
-                        <Icon className="mt-1 h-4 w-4 text-blue-600 dark:text-blue-400" />
+                        <Icon className="mt-1 h-5 w-5 text-blue-600 dark:text-blue-400" />
                         <span>{item}</span>
                       </li>
                     );

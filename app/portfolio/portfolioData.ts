@@ -47,7 +47,6 @@ export const portfolioFeature: PortfolioFeatureItem[] = [
           "TailwindCSS and Shadcn/ui for utility-first and accessible components",
           "Framer Motion to add fluid, sequential page animations",
           "React Hook Form + Zod for schema-based validation in dynamic forms",
-          "Embla Carousel to showcase project galleries with smooth, touch-friendly sliders",
         ],
       },
       {

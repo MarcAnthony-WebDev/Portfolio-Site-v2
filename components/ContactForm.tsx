@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from "react";
 import { PatternFormat } from "react-number-format";
@@ -45,7 +44,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center bg-gray-100 py-16 dark:bg-gray-900">
+    <div className="flex justify-center bg-gray-100 dark:bg-gray-900">
       <motion.form
         variants={staggerContainer}
         initial="hidden"
@@ -53,13 +52,6 @@ const ContactForm: React.FC = () => {
         className="w-full max-w-4xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800 md:p-12"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <motion.h2
-          variants={fadeInUp}
-          className="mb-6 text-center text-3xl font-bold text-gray-900 dark:text-white page-heading"
-        >
-          Let&apos;s Connect!
-        </motion.h2>
-
         {/* Grid Layout - Two Columns */}
         <motion.div variants={fadeInUp} className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {/* First Name */}

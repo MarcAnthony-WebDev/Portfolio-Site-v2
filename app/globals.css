@@ -53,6 +53,10 @@ main p {
   font-family: var(--font-dm-sans), sans-serif;
 }
 
+main li{
+  @apply text-lg;
+}
+
 nav,
 nav p,
 nav a {
@@ -74,6 +78,10 @@ main h4 {
 
 .container-styles {
   @apply main-color-styles flex h-full max-w-[900px] flex-col gap-10 px-4 py-6 md:gap-20 md:px-10 md:py-12;
+}
+
+.center-container-styles{
+  @apply main-color-styles flex h-full flex-col gap-10 px-4 py-6 md:gap-20 md:px-10 md:py-12;
 }
 
 .main-color-styles {
