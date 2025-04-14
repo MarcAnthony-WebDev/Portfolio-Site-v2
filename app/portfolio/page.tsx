@@ -11,8 +11,8 @@ const page = () => {
       <div className="heading-container flex w-full flex-col items-center justify-center gap-4 p-4">
         <h2 className="page-heading text-center">Portfolio Highlights</h2>
         <p className="text-center text-lg text-light-color dark:text-dark-color max-w-3xl">
-          Explore a curated selection of web projects I’ve built — ranging from marketing sites and
-          business tools to interactive apps and fully responsive designs.
+          {`Explore a curated selection of web projects I’ve built — ranging from marketing sites and
+          business tools to interactive apps and fully responsive designs.`}
         </p>
       </div>
 
@@ -45,8 +45,8 @@ const page = () => {
             More Projects
           </h3>
           <p className="max-w-2xl text-lg text-neutral-700 dark:text-neutral-300">
-            A collection of additional websites and applications I’ve built for clients across
-            different industries — from logistics and home services to education and e-commerce.
+            {`A collection of additional websites and applications I’ve built for clients across
+            different industries — from logistics and home services to education and e-commerce.a`}
           </p>
         </section>
 

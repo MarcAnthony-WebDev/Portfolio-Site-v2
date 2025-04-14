@@ -33,9 +33,9 @@ export default function Home() {
           <span className="text-sm tracking-wide text-yellow-500 uppercase font-medium">About Me</span>
           <h2 className="text-2xl font-bold text-light-color dark:text-dark-color">Clean Code & Creative Problem Solving</h2>
           <p className=" text-neutral-700 dark:text-neutral-300">
-            I enjoy all things web design and development. My focus is building performant, elegant websites using
+            {`I enjoy all things web design and development. My focus is building performant, elegant websites using
             modern tools like React, TypeScript, Next.js & Tailwind CSS.
-            I love creating things that are both clean under the hood and a pleasure to use.
+            I love creating things that are both clean under the hood and a pleasure to use.`}
           </p>
           <Link
             href="/about"
@@ -51,8 +51,8 @@ export default function Home() {
           <span className="text-sm tracking-wide text-yellow-500 uppercase font-medium">My Work</span>
           <h2 className="text-2xl font-bold text-light-color dark:text-dark-color">Design + Functionality</h2>
           <p className="text-neutral-700 dark:text-neutral-300">
-            I specialize in building responsive, accessible web apps with thoughtful UI and UX. Whether developing
-            full-stack platforms or marketing sites, I aim to bridge design and engineering to deliver real value.
+            {`I specialize in building responsive, accessible web apps with thoughtful UI and UX. Whether developing
+            full-stack platforms or marketing sites, I aim to bridge design and engineering to deliver real value.`}
           </p>
           <Link
             href="/portfolio"
