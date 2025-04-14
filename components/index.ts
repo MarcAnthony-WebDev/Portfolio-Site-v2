@@ -10,6 +10,7 @@ import Brands from "./Brands";
 import Logos from "./Logos";
 import Timeline from "./Timeline";
 import Dock from './Dock';
+import TiltedCard from "./TiltedCard";
 
 export {
   NavBar,
@@ -22,5 +23,6 @@ export {
   Brands,
   Logos,
   Timeline,
-  Dock
+  Dock,
+  TiltedCard
 };
