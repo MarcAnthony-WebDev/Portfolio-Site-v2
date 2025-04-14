@@ -11,6 +11,7 @@ import Logos from "./Logos";
 import Timeline from "./Timeline";
 import Dock from './Dock';
 import TiltedCard from "./TiltedCard";
+import FeaturedCard from "./FeaturedCard";
 
 export {
   NavBar,
@@ -24,5 +25,6 @@ export {
   Logos,
   Timeline,
   Dock,
-  TiltedCard
+  TiltedCard,
+  FeaturedCard
 };

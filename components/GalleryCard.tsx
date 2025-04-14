@@ -2,10 +2,10 @@
 
 import React from "react";
 
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
-import clsx from "clsx";
-import { TiltedCard } from '@/components'
+// import clsx from "clsx";
+import { CustomButton, TiltedCard } from '@/components'
 
 type GalleryCardType = {
   src: string;
@@ -48,7 +48,7 @@ const GalleryCard = ({
           }
         />
       </div>
-      <div className="content-box flex flex-col items-center gap-4 px-10">
+      <div className="content-box flex flex-col items-center gap-4 px-4 sm:px-10">
         <Link
           href={href || "/"}
           passHref
@@ -61,9 +61,7 @@ const GalleryCard = ({
         {/* <h3 className="text-2xl font-bold">{title}</h3> */}
         <p className="text-xl">{description}</p>
         <div className="button-container mt-auto">
-          <button className="portfolio-button mt-auto">
-            Visit Website
-          </button>
+          <CustomButton text='Visit Website' href={href} target="_blank" />
         </div>
       </div>
     </div>

@@ -1,16 +1,75 @@
-export type PortfolioItem = {
+export type DescriptionBlock = 
+  | {type: "paragraph", content:string;}
+  | {type: "heading", content:string;}
+  | {type: "list", content:string[];}
+
+type BasePortfolioItem = {
   id: number;
   title: string;
   href: string;
   src: string;
   alt: string;
-  description: string;
   fromColor?: string;
   viaColor?: string;
   toColor?: string;
 };
 
-export const portfolioData: PortfolioItem[] = [
+export type PortfolioGalleryItem = BasePortfolioItem  & {
+  description: string; 
+};
+
+export type PortfolioFeatureItem = BasePortfolioItem & {
+  description: DescriptionBlock[];
+}
+
+export const portfolioFeature: PortfolioFeatureItem[] = [
+  {
+    id: 1,
+    title: "Elite 3D Scan",
+    href: "https://elite3dscan.com",
+    src: "/images/elite_screenshot.png",
+    alt: "A screenshot of the Elite 3D Scan website",
+    description: [
+      {
+        type: "paragraph",
+        content:
+          "The Elite 3D Scan website is a modern, full-stack web application designed to showcase high-precision 3D scanning and BIM services for the AEC industry. This fully responsive platform delivers a seamless user experience across devices, with clean UI, smooth animations, and form validation powered by the latest frontend technologies.",
+      },
+      {
+        type: "heading",
+        content: "Tech Stack Highlights",
+      },
+      {
+        type: "list",
+        content: [
+          "Next.js for performant SSR and optimized routing",
+          "TypeScript for strong type safety and scalable architecture",
+          "TailwindCSS and Shadcn/ui for utility-first and accessible components",
+          "Framer Motion to add fluid, sequential page animations",
+          "React Hook Form + Zod for schema-based validation in dynamic forms",
+          "Embla Carousel to showcase project galleries with smooth, touch-friendly sliders",
+        ],
+      },
+      {
+        type: "heading",
+        content: "Key Features",
+      },
+      {
+        type: "list",
+        content: [
+          "Hero landing page and marketing copy aimed at the construction tech audience",
+          "Animated service and portfolio cards, enhancing engagement while communicating offerings",
+          "Interactive modal and carousel for detailed project presentations",
+          "Custom-built contact form with advanced validation and service selection",
+          "Responsive layout and adaptive navigation for mobile users, including a custom hamburger menu",
+          "Dark overlay headers with motion-enhanced titles for professional visual impact",
+        ],
+      },
+    ],
+  },
+];
+
+export const portfolioData: PortfolioGalleryItem[] = [
   {
     id: 1,
     title: "Cipco Fence",
