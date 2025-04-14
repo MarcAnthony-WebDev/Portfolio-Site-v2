@@ -1,15 +1,15 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React from "react";
 import { Loader } from "lucide-react";
 
-type CustomButtonType = ButtonHTMLAttributes<HTMLButtonElement> & {
-  text?: string;
+type CustomButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  text: string;
   loading?: boolean;
 };
 
-const CustomButton = ({ text, loading, ...props }: CustomButtonType) => {
+const CustomButton = ({ text, loading = false, ...props }: CustomButtonProps) => {
   return (
     <button
-      className="mt-3 w-52 self-center rounded-3xl dark:bg-slate-600 p-2 dark:text-dark-color text-light-color bg-neutral-300 transition duration-200 dark:hover:bg-slate-500 hover:bg-neutral-400 active:translate-y-1"
+      className="mt-3 w-52 self-center rounded-3xl bg-neutral-300 p-2 text-light-color transition duration-200 hover:bg-neutral-400 active:translate-y-1 dark:bg-slate-600 dark:text-dark-color dark:hover:bg-slate-500"
       {...props}
     >
       {loading ? (

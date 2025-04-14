@@ -1,18 +1,30 @@
+'use client';
+
 import React from "react";
-
+import { motion } from "framer-motion";
+import { staggerContainer, fadeInUp } from "@/lib/animations";
 import { ArrowRight } from "lucide-react";
-
 import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="container-styles">
-      <div className="heading-container">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      animate="show"
+      className="container-styles"
+    >
+      <motion.div variants={fadeInUp} className="heading-container">
         <h2 className="page-heading">A Bit About Me</h2>
-      </div>
-      <div className="text-container flex flex-col gap-12 leading-loose">
+      </motion.div>
+
+      <motion.div
+        variants={fadeInUp}
+        className="text-container flex flex-col gap-12 leading-loose"
+      >
+        {/* HOW IT STARTED */}
         <div className="text-group flex flex-col gap-2">
-          <h4 className="">HOW IT STARTED</h4>
+          <h4>HOW IT STARTED</h4>
           <p>
             Based in Long Island, NY, my journey into programming began in 2017
             while I was working as a bartender. It all started with tinkering
@@ -25,8 +37,10 @@ const About = () => {
             Next.js, and turning my curiosity into a career I love.
           </p>
         </div>
+
+        {/* HOW IT'S GOING */}
         <div className="text-group flex flex-col gap-2">
-          <h4 className="">HOW IT&apos;S GOING</h4>
+          <h4>HOW IT&apos;S GOING</h4>
           <p>
             Since I started my journey in web development, I’ve had the
             privilege of working at some amazing companies, building
@@ -40,8 +54,10 @@ const About = () => {
             making my journey even more meaningful. 😊
           </p>
         </div>
+
+        {/* INTERESTS */}
         <div className="text-group flex flex-col gap-2">
-          <h4 className="">MY INTERESTS</h4>
+          <h4>MY INTERESTS</h4>
           <p>
             My interests include many things such as playing the guitar, reading
             short stories, particularly those of the Russian greats such as
@@ -51,8 +67,9 @@ const About = () => {
           </p>
         </div>
 
+        {/* CONTACT */}
         <div className="text-group flex flex-col gap-2">
-          <h4 className="">HOW TO FIND ME</h4>
+          <h4>HOW TO FIND ME</h4>
           <p>
             I&apos;d love to hear from you! Whether it be for work,
             collaboration on a project or just to connect, you can find me on{" "}
@@ -72,22 +89,23 @@ const About = () => {
               Github
             </Link>{" "}
             or you can send me an{" "}
-            <Link href="contact" className="font-bold hover:underline">
+            <Link href="/contact" className="font-bold hover:underline">
               Email Here
             </Link>
             .
           </p>
+
           <Link
             passHref
             href="/contact"
-            className="group mt-2 flex w-max flex-row items-center gap-2 hover:underline"
+            className="arrow-link group mt-2 flex w-max flex-row items-center gap-2 hover:underline"
           >
             Send Me A Message
             <ArrowRight className="transition-transform duration-200 group-hover:translate-x-2" />
           </Link>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

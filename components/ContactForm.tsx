@@ -1,12 +1,14 @@
+
 "use client";
 import { useState } from "react";
 import { PatternFormat } from "react-number-format";
-
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ContactFormValues, contactFormSchema } from "@/lib/validation";
 import CustomButton from "./CustomButton";
 import Modal from "./Modal";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const ContactForm: React.FC = () => {
   const {
@@ -44,16 +46,22 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="flex justify-center bg-gray-100 py-16 dark:bg-gray-900">
-      <form
+      <motion.form
+        variants={staggerContainer}
+        initial="hidden"
+        animate="show"
         className="w-full max-w-4xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800 md:p-12"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <h2 className="mb-6 text-center text-3xl font-bold text-gray-900 dark:text-white page-heading">
+        <motion.h2
+          variants={fadeInUp}
+          className="mb-6 text-center text-3xl font-bold text-gray-900 dark:text-white page-heading"
+        >
           Let&apos;s Connect!
-        </h2>
+        </motion.h2>
 
         {/* Grid Layout - Two Columns */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <motion.div variants={fadeInUp} className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {/* First Name */}
           <div>
             <label className="form__label block text-gray-700 dark:text-gray-300">
@@ -105,7 +113,7 @@ const ContactForm: React.FC = () => {
             )}
           </div>
 
-          {/* new input phone */}
+          {/* Phone */}
           <div>
             <label className="form__label block text-gray-700 dark:text-gray-300">
               Phone Number
@@ -131,7 +139,7 @@ const ContactForm: React.FC = () => {
             )}
           </div>
 
-          {/* Company Name */}
+          {/* Company */}
           <div>
             <label className="form__label block text-gray-700 dark:text-gray-300">
               Company Name
@@ -161,7 +169,7 @@ const ContactForm: React.FC = () => {
               <option value="" disabled>
                 --- Select an option ---
               </option>
-              <option className="" value="quote">Request a Quote</option>
+              <option value="quote">Request a Quote</option>
               <option value="general">General Inquiry</option>
               <option value="employment">Employment Opportunity</option>
               <option value="contract">Contract Work</option>
@@ -172,8 +180,8 @@ const ContactForm: React.FC = () => {
               </p>
             )}
           </div>
-          
-          {/* Message - Full Width */}
+
+          {/* Message */}
           <div className="md:col-span-2">
             <label className="form__label block text-gray-700 dark:text-gray-300">
               Message
@@ -189,17 +197,18 @@ const ContactForm: React.FC = () => {
               </p>
             )}
           </div>
-        </div>
+        </motion.div>
 
         {/* Submit Button */}
-        <div className="mt-6 flex justify-center">
+        <motion.div variants={fadeInUp} className="mt-6 flex justify-center">
           <CustomButton
             type="submit"
             text="Send Message"
             loading={isSubmitting}
           />
-        </div>
-      </form>
+        </motion.div>
+      </motion.form>
+
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );

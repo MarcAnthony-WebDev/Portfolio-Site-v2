@@ -34,7 +34,8 @@ h3,
 h4,
 h5,
 h6,
-button {
+button,
+a{
   font-family: var(--font-poppins), sans-serif;
   font-weight: 500;
 }
@@ -59,7 +60,7 @@ nav a {
   font-weight: 400;
 }
 
-main a {
+main a.arrow-link {
   @apply text-xl md:text-xl;
 }
 

@@ -5,7 +5,8 @@ import React from "react";
 // import Image from "next/image";
 import Link from "next/link";
 // import clsx from "clsx";
-import { CustomButton, TiltedCard } from '@/components'
+import { TiltedCard } from '@/components'
+import LinkButton from "@/components/LinkButton";
 
 type GalleryCardType = {
   src: string;
@@ -61,7 +62,7 @@ const GalleryCard = ({
         {/* <h3 className="text-2xl font-bold">{title}</h3> */}
         <p className="text-xl">{description}</p>
         <div className="button-container mt-auto">
-          <CustomButton text='Visit Website' href={href} target="_blank" />
+          <LinkButton text='Visit Website' href={href} target="_blank" />
         </div>
       </div>
     </div>

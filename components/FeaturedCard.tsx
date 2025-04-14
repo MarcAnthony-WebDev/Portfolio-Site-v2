@@ -7,7 +7,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import Logos from "@/components/Logos";
-import CustomButton from '@/components/CustomButton';
+import LinkButton from '@/components/LinkButton';
 
 import {
   Smartphone,
@@ -118,7 +118,7 @@ const FeaturedCard = ({ id, src, title, description, href, alt }: FeaturedCardPr
           ))}
 
           <motion.div variants={fadeInUp}>
-            <CustomButton text="Visit Website" href={href} target="_blank" />
+            <LinkButton text="Visit Website" href={href} target="_blank" />
           </motion.div>
         </div>
       </div>
