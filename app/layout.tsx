@@ -22,8 +22,41 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Marcanthony's Portfolio",
-  description: "Created by Marcanthony Tumminello",
+  title: {
+    default: "Marcanthony Tumminello | React & Next.js Developer",
+    template: "%s | Marcanthony Tumminello",
+  },
+  description:
+    "Portfolio site showcasing the work and experience of Marcanthony Tumminello.",
+  keywords: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Web Development",
+    "Portfolio",
+    "Marcanthony Tumminello",
+  ],
+  authors: [{ name: "Marcanthony Tumminello" }],
+  creator: "Marcanthony Tumminello",
+  openGraph: {
+    title: "Marcanthony Tumminello | React & Next.js Developer",
+    description:
+      "Portfolio site showcasing the work and experience of Marcanthony Tumminello.",
+    siteName: "Marcanthony's Portfolio",
+    images: [
+      {
+        url: "/images/cropped-headshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Marcanthony Tumminello",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  icons: {
+    icon: "/images/MT-logo-bold.png",
+  },
 };
 
 export default function RootLayout({
